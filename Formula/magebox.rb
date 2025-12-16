@@ -10,14 +10,14 @@ class Magebox < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-darwin-arm64"
-      sha256 "2dff976f539faf02213ee0277e973c7210e3a42016d6b5682cb1fb0f9dc5cbe2"
+      sha256 "87c0e8142a1e79bce7d507b501fd76436b586ca542d2f81679476aba9f483541"
 
       def install
         bin.install "magebox-darwin-arm64" => "magebox"
       end
     else
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-darwin-amd64"
-      sha256 "cc8c87533b608851f8e5893bc74098c32b7f4ab5cfaa6800888074156c20327c"
+      sha256 "be7e28cf4776d4d0ab1ce9df6c325e37ddde5026303b0483f1a6fc7aa42eabd8"
 
       def install
         bin.install "magebox-darwin-amd64" => "magebox"
@@ -28,14 +28,14 @@ class Magebox < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-linux-arm64"
-      sha256 "95084ee9962b611ae9c38f17d4a80c95d346237c4046a7d3beab18aa27a697e5"
+      sha256 "7c0c7a4905a08eb7bfb2c623bf995c3e1370c5d9ad7551dbe12667c77c21b862"
 
       def install
         bin.install "magebox-linux-arm64" => "magebox"
       end
     else
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-linux-amd64"
-      sha256 "ccf17b6fd8138366a8a95e85dc9c809b9f0a6ed078391e15a9c890d3cd3f2c6a"
+      sha256 "b5d70830b4609c67a27019fd3fb38bcc6b33f52754596dc3840493f6b96ca66a"
 
       def install
         bin.install "magebox-linux-amd64" => "magebox"
