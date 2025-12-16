@@ -4,20 +4,20 @@
 class Magebox < Formula
   desc "Fast, native Magento development environment"
   homepage "https://magebox.dev"
-  version "0.16.1"
+  version "0.16.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-darwin-arm64"
-      sha256 "b247b89a6d1d31ae013dbd71e3d356da6108b96718e31dd8cb1080ba9515597a"
+      sha256 "4653bd123a2ee7ca73918201aa40f2cee779c0c142037869b9d332014356a33c"
 
       def install
         bin.install "magebox-darwin-arm64" => "magebox"
       end
     else
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-darwin-amd64"
-      sha256 "4fed1d75a571d314319122c5ad147ab68fb47dc6755fcd1e39c4c283110781cd"
+      sha256 "9717eb33f10ace8dce5a5e2dc845869730eadd5f5b68773c6842f8e0191c0bce"
 
       def install
         bin.install "magebox-darwin-amd64" => "magebox"
@@ -28,14 +28,14 @@ class Magebox < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-linux-arm64"
-      sha256 "67f2ed6df5729efd7217b1871e564974124b527c3c51b0734ad57b1a64ca2c09"
+      sha256 "12a4375333bfd857c86b266cf21819714a75e0a03cb857893f4d7fc812e9a4df"
 
       def install
         bin.install "magebox-linux-arm64" => "magebox"
       end
     else
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-linux-amd64"
-      sha256 "660c54904ac076aca350e665d8e75888bf258c09a58f0672a7f2216965cba0d5"
+      sha256 "dcee81129771176f001bded42f2645052a659a88c61a3d8c1353dd31791466fa"
 
       def install
         bin.install "magebox-linux-amd64" => "magebox"
