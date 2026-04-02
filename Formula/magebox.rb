@@ -4,37 +4,37 @@
 class Magebox < Formula
   desc "Fast, native Magento development environment"
   homepage "https://magebox.dev"
-  version "1.10.1"
+  version "1.11.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-darwin-arm64"
-      sha256 "bfa660730b006ceb45ecbffc35ae7b0253d8a641de4fd4232c27a96b397a8b40"
+      sha256 "ebc92d305dd996eeabebc6b921fe6f7cb40a27ac710ef799e40354f5de15b047"
     end
     on_intel do
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-darwin-amd64"
-      sha256 "ed36ada25e5de310a225caa0e2cce2579d4264464aa7cfd6c6e023d2db519170"
+      sha256 "0b4596cbbcfab9318dc1e4796e80c0b17b15d2c8b5a1d8ff4c6f74d439cf7df5"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-linux-arm64"
-      sha256 "83c046c34bc2cc80807149b3186215ea1ec8d9e940344ff28b41f9c9798f355a"
+      sha256 "62348ea0bcbe5e2e9b3857acf76baa47cdd4888c181e865e3130cc2488107c60"
     end
     on_intel do
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-linux-amd64"
-      sha256 "70ea51a13825a885252f858645f8d5edc5e6487b09e08e0e2d1f29d7c564d1e0"
+      sha256 "4f3a17cb7479505681a378a163b83504c0dc0c4596cd8127129421432c89dcc9"
     end
   end
 
   def install
     suffix = if OS.mac?
-               Hardware::CPU.arm? ? "darwin-arm64" : "darwin-amd64"
-             else
-               Hardware::CPU.arm? ? "linux-arm64" : "linux-amd64"
-             end
+                 Hardware::CPU.arm? ? "darwin-arm64" : "darwin-amd64"
+               else
+                 Hardware::CPU.arm? ? "linux-arm64" : "linux-amd64"
+               end
     bin.install "magebox-#{suffix}" => "magebox"
   end
 
