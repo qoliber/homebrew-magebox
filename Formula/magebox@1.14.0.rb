@@ -1,7 +1,7 @@
 # typed: false
 # frozen_string_literal: true
 
-class Magebox < Formula
+class MageboxAT1140 < Formula
   desc "Fast, native Magento development environment"
   homepage "https://magebox.dev"
   version "1.14.0"
