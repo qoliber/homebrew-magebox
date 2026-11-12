@@ -4,28 +4,28 @@
 class Magebox < Formula
   desc "Fast, native Magento development environment"
   homepage "https://magebox.dev"
-  version "2.2.0"
+  version "2.2.1"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-darwin-arm64"
-      sha256 "6f139c13e664cf16733d25722726ea17e736400a4d1f43f6f26eaec8e7b44129"
+      sha256 "015071892ac90e89d4892ba142511192a470a4765393245baed2747467500836"
     end
     on_intel do
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-darwin-amd64"
-      sha256 "f63473b397a6d1cc9c098d08933963e4f974307720ece9adb81a53813d057737"
+      sha256 "d2a5bc545071414705ddf36d5d375f1ef6527d87baea535cb6389a7a4162ce03"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-linux-arm64"
-      sha256 "d113cc6aaf8a791d719cc5d8ac9c17cf0366dbd2af13c33c2b79f581712115d9"
+      sha256 "424ba8f976502cceeacfd2473eeaa3574c98d67fe5d1746ff73d39128b1140da"
     end
     on_intel do
       url "https://github.com/qoliber/magebox/releases/download/v#{version}/magebox-linux-amd64"
-      sha256 "b476bed3c303897b7a666ba1419aa9999c85ca6aebcd62e3494149cb07c4f645"
+      sha256 "ff9e92545859918203f132b9529417e756968cb399cb1711c84a534e81fe63d7"
     end
   end
 
